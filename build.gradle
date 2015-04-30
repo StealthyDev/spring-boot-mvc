@@ -14,8 +14,9 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'war'
 
-jar {
+war {
     baseName = 'spring-boot-mvc'
     version = '0.0.1-SNAPSHOT'
 }
@@ -27,8 +28,14 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    providedRuntime
+}
+
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 
     testCompile("junit:junit:4.12")
 }
