@@ -9,13 +9,18 @@ This is a sample project with just a ping controller
 
 # Running the application
 
-Development
+Standalone
 ```
 gradle bootRun
 ```
 
-Production
+War file at *build\libs\* can be deployed in any Tomcat container
+
 ```
-gradle build
-java -jar build/libs/spring-boot-mvc-0.0.1-SNAPSHOT.jar
+com.stealthydev.sample.springbootmvc.Application
+  extends
+    SpringBootServletInitializer
+  and
+    overrides configure()
+for this purpose
 ```
