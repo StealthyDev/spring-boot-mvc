@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PingController {
     @RequestMapping(value = "/")
     @ResponseBody
-    public String securedPing() {
+    public String ping() {
         return "App is up!";
     }
 }
