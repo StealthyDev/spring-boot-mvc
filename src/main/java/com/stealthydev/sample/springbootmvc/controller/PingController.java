@@ -9,7 +9,7 @@ import java.text.MessageFormat;
 
 @RestController
 public class PingController {
-    @RequestMapping(value = "/")
+    @RequestMapping(value = {"/", "/ping"})
     @ResponseBody
     public String ping() {
         return MessageFormat.format("Server started at {0}", Application.startTime);
