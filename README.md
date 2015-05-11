@@ -24,3 +24,8 @@ com.stealthydev.sample.springbootmvc.Application
     overrides configure()
 for this purpose
 ```
+
+http://localhost:8080/ping
+http://localhost:8080/book/list
+http://localhost:8080/book/findBook?id=2
+http://localhost:8080/book/search?author=Madhusudhan
